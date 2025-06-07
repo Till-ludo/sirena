@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fefefe;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+.logo {
+  height: auto;
+  width: 200px;
+}
+
+
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: #333;
+  min-width: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  top: 100%;
+  left: 0;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+}
+
+.nav-links li:hover .dropdown-content {
+  display: block;
+}
+
+.hero {
+  background: url('hero_pizza_background.png') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 150px 20px;
+}
+
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #fafafa;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+.falling-icon {
+  position: fixed;
+  top: -50px;
+  font-size: 24px;
+  pointer-events: none;
+  animation: fall linear infinite;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+
+.maintenance-message {
+  text-align: center;
+  padding: 100px 20px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+
+/* Bloc maintenance visuelle */
+body {
+  background-color: #fff8f0;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.maintenance {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.maintenance-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.maintenance h1 {
+  font-size: 1.8rem;
+  color: #b22222;
+  margin-bottom: 10px;
+}
+
+.maintenance p {
+  font-size: 1.1rem;
+  color: #444;
+}
