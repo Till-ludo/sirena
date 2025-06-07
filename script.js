@@ -1,12 +1,14 @@
 // Navigation douce
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
+document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
-    });
+    }
   });
-  document.addEventListener('DOMContentLoaded', () => {
+});
+ent.addEventListener('DOMContentLoaded', () => {
     const icons = ['🍕', '🍝', '🍨', '🦐', '🎂'];
     for (let i = 0; i < 30; i++) {
       const el = document.createElement('div');
