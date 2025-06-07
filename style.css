@@ -41,22 +41,23 @@ body {
   font-size: 1rem;
 }
 .dropdown-content {
-  display: none;
   position: absolute;
+  display: none;
   background-color: white;
-  color: #333;
-  min-width: 180px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  top: 100%;
-  left: 0;
   z-index: 100;
+  border-radius: 4px;
+  min-width: 160px;
 }
 .dropdown-content a {
   color: #333;
   padding: 12px 20px;
   text-decoration: none;
   display: block;
+}
+.dropdown-toggle {
+  cursor: default;
+  font-weight: bold;
 }
 .dropdown-content a:hover {
   background-color: #f5f5f5;
