@@ -1,23 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto&display=swap');
 
 body {
-  background-color: #fff8f0;
   font-family: 'Roboto', sans-serif;
+  background-color: #fefefe;
   margin: 0;
   padding: 0;
   color: #333;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   background-color: #ffffff;
   padding: 20px 40px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
+
 .logo {
   height: auto;
   width: 200px;
 }
+
+
 .nav-center {
   flex: 1;
   display: flex;
@@ -28,11 +38,12 @@ body {
   display: flex;
   justify-content: center;
   gap: 24px;
-  margin: 0;
+  margin-top: 10px;
   padding: 0;
 }
-.nav-links li {
-  position: relative;
+
+.nav-links li:hover .dropdown-content {
+  display: block;
 }
 .nav-links a {
   color: #333;
@@ -40,6 +51,7 @@ body {
   font-weight: bold;
   font-size: 1rem;
 }
+
 .dropdown-content {
   position: absolute;
   display: none;
@@ -49,21 +61,24 @@ body {
   border-radius: 4px;
   min-width: 160px;
 }
+
 .dropdown-content a {
   color: #333;
   padding: 12px 20px;
   text-decoration: none;
   display: block;
 }
-.dropdown-toggle {
-  cursor: default;
-  font-weight: bold;
-}
+
 .dropdown-content a:hover {
   background-color: #f5f5f5;
 }
+
 .nav-links li:hover .dropdown-content {
   display: block;
+}
+.dropdown-toggle {
+  cursor: default;
+  font-weight: bold;
 }
 .hero {
   background: url('hero_pizza_background.png') center/cover no-repeat;
@@ -71,38 +86,74 @@ body {
   text-align: center;
   padding: 150px 20px;
 }
-.gallery-staggered {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
+
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
-.gallery-staggered .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: nowrap;
-}
-.gallery-staggered .half {
-  flex: 1 1 50%;
-}
-.gallery-staggered img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-.text-block {
-  padding: 10px 20px;
-}
+
 footer {
   text-align: center;
   padding: 30px 20px;
   background-color: #fafafa;
   border-top: 1px solid #ddd;
   font-size: 0.9rem;
+}
+.falling-icon {
+  position: fixed;
+  top: -50px;
+  font-size: 24px;
+  pointer-events: none;
+  animation: fall linear infinite;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+
+.maintenance-message {
+  text-align: center;
+  padding: 100px 20px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+
+/* Bloc maintenance visuelle */
+body {
+  background-color: #fff8f0;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.maintenance {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.maintenance-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.maintenance h1 {
+  font-size: 1.8rem;
+  color: #b22222;
+  margin-bottom: 10px;
+}
+
+.maintenance p {
+  font-size: 1.1rem;
+  color: #444;
 }
