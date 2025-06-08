@@ -16,24 +16,34 @@
       padding: 0;
       color: #333;
     }
-
     .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #ffffff;
-      padding: 10px 20px;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  height: 80px;
+  padding: 0 20px;
+  background-color: white;
+}
+    .nav-center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
 
     .logo {
       height: 60px;
     }
-
     .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 40px;
-    }
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+}
 
     .nav-links li {
       position: relative;
@@ -76,7 +86,7 @@
 
     .menu h1 {
       text-align: center;
-      color: #fafafa;
+      color: #c20d0d;
       font-size: 2.5rem;
     }
 
@@ -150,8 +160,7 @@
     <img src="logo.png" alt="Logo Sirena 2" class="logo" />
     <ul class="nav-links">
       <li><a href="index.html">Accueil</a></li>
-      <li>
-        <a href="#">À Emporter ▾</a>
+      <li><a href="#">À Emporter ▾</a>
         <div class="dropdown-content">
           <a href="pizzas.html">Nos Pizzas</a>
           <a href="pates.html">Nos Pâtes</a>
@@ -161,7 +170,8 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-
+  
+  
   <main class="menu">
     <h1>Pâtes à emporter</h1>
 
