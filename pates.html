@@ -1,18 +1,153 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nos Pâtes - Sirena 2</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #fffaf4;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #b22222;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      height: 60px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      z-index: 10;
+    }
+
+    .nav-links li:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 10px;
+      display: block;
+      text-decoration: none;
+    }
+
+    main.menu {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .menu h1 {
+      text-align: center;
+      color: #b22222;
+      font-size: 2.5rem;
+    }
+
+    .menu-section {
+      margin-top: 40px;
+    }
+
+    .menu-section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .menu-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu-section li {
+      background: white;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .menu-section li::before {
+      content: "🍝";
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+
+    .menu-section li strong {
+      display: block;
+      font-size: 1rem;
+      color: #111;
+    }
+
+    .menu-section li span {
+      font-weight: bold;
+      color: #b22222;
+      white-space: nowrap;
+    }
+
+    footer {
+      background-color: #222;
+      color: #eee;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      .menu-section li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-section li span {
+        margin-top: 8px;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar">
-    <img src="logo.png" alt="Logo Sirena 2" class="logo">
+    <img src="logo.png" alt="Logo Sirena 2" class="logo" />
     <ul class="nav-links">
       <li><a href="index.html">Accueil</a></li>
       <li>
@@ -27,41 +162,43 @@
     </ul>
   </nav>
 
-  
-<main class="menu">
-  <h1>Pâtes à emporter</h1>
-  <section class="menu-section">
-    <h2>Pasta Classique</h2>
-    <ul>
-      <li><strong>Penne 4 Fromaggi</strong> – Crème, Gorgonzola, Taleggio, Parmesan <span>15,50 €</span></li>
-      <li><strong>Spaghetti Bolognaise</strong> <span>13,50 €</span></li>
-      <li><strong>Spaghetti Carbonara</strong> – Crème, Lardon <span>15,00 €</span></li>
-      <li><strong>Penne Proscuito</strong> – Crème, Jambon <span>13,00 €</span></li>
-      <li><strong>Penne Diavola</strong> – Sauce Tomate, Piment, Ail, Basilic <span>14,00 €</span></li>
-      <li><strong>Penne Al Pollo</strong> – Poulet, Sauce Gorgonzola <span>16,50 €</span></li>
-      <li><strong>Tagliatelle Al Forno</strong> – Crème, Tomate, Jambon, Champignon <span>16,00 €</span></li>
-      <li><strong>Tagliatelle Scampis</strong> – Scampis déglacés à la vodka, ciboulette, ail, crème tomate <span>18,00 €</span></li>
-      <li><strong>Penne Brocolis</strong> – Crème, Lardon, Brocolis <span>15,50 €</span></li>
-      <li><strong>Lasagne Della Casa</strong> – Jambon, Bolognaise, Crème Tomate <span>15,50 €</span></li>
-      <li><strong>Cannelloni Della Nonna</strong> – Viande, Crème, Tomate <span>16,00 €</span></li>
-      <li><strong>Spaghetti Végétarien</strong> – Courgette, Aubergine, Tomate, Oignon, Basilic, Légumes de saison <span>16,50 €</span></li>
-      <li><strong>Pasta Bambino (Enfant)</strong> <span>8,90 €</span></li>
-    </ul>
-  </section>
+  <main class="menu">
+    <h1>Pâtes à emporter</h1>
 
-  <section class="menu-section">
-    <h2>Pasta Gourmet</h2>
-    <ul>
-      <li><strong>Spaghetti Paesana</strong> – Thon, Échalote rouge, Tomate fraîche, Ail, Huile d’olive, Basilic, Câpres <span>17,50 €</span></li>
-      <li><strong>Spaghetti Vongole</strong> – Palourdes, Tomate fraîche, Ail, Persil <span>20,50 €</span></li>
-      <li><strong>Spaghetti Frutti Di Mare</strong> – Tomate cuisinée, Ail, Basilic, Cocktail de fruits de mer <span>22,50 €</span></li>
-      <li><strong>Spaghetti San Daniele</strong> – Marinade de Parme, Roquette, Huile d’olive, Tomate séchée, Parmesan <span>18,90 €</span></li>
-      <li><strong>Pappardelle Aux Truffes</strong> – Crème de truffe, Tomates cerises <span>19,50 €</span></li>
-      <li><strong>Risotto Frutti Di Mare</strong> – Fruits de mer, Ail, Basilic, Vin blanc, Tomate cuisinée <span>23,00 €</span></li>
-      <li><strong>Gnoccocchi Aux Truffes</strong> – Champignons, Salsa Tartufata, Sauce Gorgonzola <span>15,90 €</span></li>
-    </ul>
-  </section>
-</main>
+    <!-- Pasta Classique -->
+    <section class="menu-section">
+      <h2>Pasta Classique</h2>
+      <ul>
+        <li><strong>Penne 4 Fromaggi</strong> Crème, Gorgonzola, Taleggio, Parmesan <span>15,50 €</span></li>
+        <li><strong>Spaghetti Bolognaise</strong> <span>13,50 €</span></li>
+        <li><strong>Spaghetti Carbonara</strong> Crème, Lardon <span>15,00 €</span></li>
+        <li><strong>Penne Proscuito</strong> Crème, Jambon <span>13,00 €</span></li>
+        <li><strong>Penne Diavola</strong> Sauce Tomate, Piment, Ail, Basilic <span>14,00 €</span></li>
+        <li><strong>Penne Al Pollo</strong> Poulet, Sauce Gorgonzola <span>16,50 €</span></li>
+        <li><strong>Tagliatelle Al Forno</strong> Crème, Tomate, Jambon, Champignon <span>16,00 €</span></li>
+        <li><strong>Tagliatelle Scampis</strong> Scampis à la vodka, ciboulette, ail, crème tomate <span>18,00 €</span></li>
+        <li><strong>Penne Brocolis</strong> Crème, Lardon, Brocolis <span>15,50 €</span></li>
+        <li><strong>Lasagne Della Casa</strong> Jambon, Bolognaise, Crème Tomate <span>15,50 €</span></li>
+        <li><strong>Cannelloni Della Nonna</strong> Viande, Crème, Tomate <span>16,00 €</span></li>
+        <li><strong>Spaghetti Végétarien</strong> Courgette, Aubergine, Tomate, Oignon, Basilic <span>16,50 €</span></li>
+        <li><strong>Pasta Bambino</strong> Enfant <span>8,90 €</span></li>
+      </ul>
+    </section>
+
+    <!-- Pasta Gourmet -->
+    <section class="menu-section">
+      <h2>Pasta Gourmet</h2>
+      <ul>
+        <li><strong>Spaghetti Paesana</strong> Thon, Échalote, Tomate, Ail, Huile d’olive, Câpres <span>17,50 €</span></li>
+        <li><strong>Spaghetti Vongole</strong> Palourdes, Tomate fraîche, Ail, Persil <span>20,50 €</span></li>
+        <li><strong>Spaghetti Frutti Di Mare</strong> Fruits de mer, Basilic, Tomate cuisinée <span>22,50 €</span></li>
+        <li><strong>Spaghetti San Daniele</strong> Jambon de Parme, Roquette, Tomate séchée, Parmesan <span>18,90 €</span></li>
+        <li><strong>Pappardelle Aux Truffes</strong> Crème de truffe, Tomates cerises <span>19,50 €</span></li>
+        <li><strong>Risotto Frutti Di Mare</strong> Fruits de mer, Vin blanc, Tomate cuisinée <span>23,00 €</span></li>
+        <li><strong>Gnoccocchi Aux Truffes</strong> Champignons, Salsa Tartufata, Gorgonzola <span>15,90 €</span></li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
     📍 Rue Haute Vinave 20, 4690 Glons — 📞 04 286 57 37 — ✉️ contact@sirena2.be
