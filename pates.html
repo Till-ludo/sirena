@@ -48,7 +48,7 @@
     }
 
     .nav-links a {
-      color: #ffffff;
+      color: #b22222;
       text-decoration: none;
       font-weight: bold;
     }
@@ -82,56 +82,53 @@
       padding: 40px 20px;
     }
 
-    .menu h1 {
-      text-align: center;
-      color: #b22222;
-      font-size: 2.5rem;
-    }
-
-    .menu-section {
-      margin-top: 40px;
-    }
-
     .menu-section h2 {
-      font-size: 1.6rem;
-      margin-bottom: 20px;
       border-bottom: 2px solid #ddd;
       padding-bottom: 5px;
+      color: #b22222;
     }
-
     .menu-section ul {
       list-style: none;
       padding: 0;
     }
-
     .menu-section li {
+      display: table;
+      width: 100%;
+      margin-bottom: 12px;
       background: white;
-      margin-bottom: 15px;
-      padding: 15px;
       border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      padding: 10px 12px;
     }
-
-    .menu-section li::before {
-      content: "🍝";
-      margin-right: 10px;
-      font-size: 1.2rem;
+    .menu-line {
+      display: table-row;
     }
-
-    .menu-section li strong {
-      display: block;
+    .menu-item-name, .menu-item-desc, .menu-item-price {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 4px 10px;
+    }
+    .menu-item-name {
+      width: 30%;
+      font-weight: bold;
+    }
+    .menu-icon {
+      margin-right: 8px;
       font-size: 1rem;
-      color: #111;
     }
-
-    .menu-section li span {
+    .menu-item-desc {
+      width: 50%;
+      color: #555;
+      font-size: 0.95rem;
+    }
+    .menu-item-price {
+      width: 20%;
       font-weight: bold;
       color: #b22222;
+      text-align: right;
       white-space: nowrap;
     }
+  </style
 
     footer {
       background-color: #222;
@@ -151,7 +148,7 @@
         margin-top: 8px;
       }
     }
-  </style>
+  </stylee>
 </head>
 <body>
   <nav class="navbar">
@@ -175,31 +172,30 @@
     <section class="menu-section">
       <h2>Pasta Classique</h2>
       <ul>
-        <li><strong>Penne 4 Fromaggi</strong> Crème, Gorgonzola, Taleggio, Parmesan <span>15,50 €</span></li>
-        <li><strong>Spaghetti Bolognaise</strong> <span>13,50 €</span></li>
-        <li><strong>Spaghetti Carbonara</strong> Crème, Lardon <span>15,00 €</span></li>
-        <li><strong>Penne Proscuito</strong> Crème, Jambon <span>13,00 €</span></li>
-        <li><strong>Penne Diavola</strong> Sauce Tomate, Piment, Ail, Basilic <span>14,00 €</span></li>
-        <li><strong>Penne Al Pollo</strong> Poulet, Sauce Gorgonzola <span>16,50 €</span></li>
-        <li><strong>Tagliatelle Al Forno</strong> Crème, Tomate, Jambon, Champignon <span>16,00 €</span></li>
-        <li><strong>Tagliatelle Scampis</strong> Scampis à la vodka, ciboulette, ail, crème tomate <span>18,00 €</span></li>
-        <li><strong>Penne Brocolis</strong> Crème, Lardon, Brocolis <span>15,50 €</span></li>
-        <li><strong>Lasagne Della Casa</strong> Jambon, Bolognaise, Crème Tomate <span>15,50 €</span></li>
-        <li><strong>Cannelloni Della Nonna</strong> Viande, Crème, Tomate <span>16,00 €</span></li>
-        <li><strong>Spaghetti Végétarien</strong> Courgette, Aubergine, Tomate, Oignon, Basilic <span>16,50 €</span></li>
-        <li><strong>Pasta Bambino</strong> Enfant <span>8,90 €</span></li>
-      </ul>
+        <li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Penne 4 Fromaggi</div><div class="menu-item-desc">Crème, Gorgonzola, Taleggio, Parmesan</div><div class="menu-item-price">15,50 €</div></div></li>
+<li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Spaghetti Bolognaise</div><div class="menu-item-desc"></div><div class="menu-item-price">13,50 €</div></div></li>
+<li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Spaghetti Carbonara</div><div class="menu-item-desc">Crème, Lardon</div><div class="menu-item-price">15,00 €</div></div></li>
+<li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Penne Proscuito</div><div class="menu-item-desc">Crème, Jambon</div><div class="menu-item-price">13,00 €</div></div></li>
+<li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Penne Diavola</div><div class="menu-item-desc">Sauce Tomate, Piment, Ail, Basilic</div><div class="menu-item-price">14,00 €</div></div></li>
+<li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Penne Al Pollo</div><div class="menu-item-desc">Poulet, Sauce Gorgonzola</div><div class="menu-item-price">16,50 €</div></div></li>
+<li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Tagliatelle Al Forno</div><div class="menu-item-desc">Crème, Tomate, Jambon, Champignon</div><div class="menu-item-price">16,00 €</div></div></li>
+<li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Tagliatelle Scampis</div><div class="menu-item-desc">Scampis à la vodka, ciboulette, ail, crème tomate</div><div class="menu-item-price">18,00 €</div></div></li>
+<li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Penne Brocolis</div><div class="menu-item-desc">Crème, Lardon, Brocolis</div><div class="menu-item-price">15,50 €</div></div></li>
+<li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Lasagne Della Casa</div><div class="menu-item-desc">Jambon, Bolognaise, Crème Tomate</div><div class="menu-item-price">15,50 €</div></div></li>
+<li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Cannelloni Della Nonna</div><div class="menu-item-desc">Viande, Crème, Tomate</div><div class="menu-item-price">16,00 €</div></div></li>
+<li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Spaghetti Végétarien</div><div class="menu-item-desc">Courgette, Aubergine, Tomate, Oignon, Basilic</div><div class="menu-item-price">16,50 €</div></div></li>
+<li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Pasta Bambino</div><div class="menu-item-desc">Enfant</div><div class="menu-item-price">8,90 €</div></div></li>
     </section>
     <section class="menu-section">
       <h2>Pasta Gourmet</h2>
       <ul>
-        <li><strong>Spaghetti Paesana</strong> Thon, Échalote, Tomate, Ail, Huile d’olive, Câpres <span>17,50 €</span></li>
-        <li><strong>Spaghetti Vongole</strong> Palourdes, Tomate fraîche, Ail, Persil <span>20,50 €</span></li>
-        <li><strong>Spaghetti Frutti Di Mare</strong> Fruits de mer, Basilic, Tomate cuisinée <span>22,50 €</span></li>
-        <li><strong>Spaghetti San Daniele</strong> Jambon de Parme, Roquette, Tomate séchée, Parmesan <span>18,90 €</span></li>
-        <li><strong>Pappardelle Aux Truffes</strong> Crème de truffe, Tomates cerises <span>19,50 €</span></li>
-        <li><strong>Risotto Frutti Di Mare</strong> Fruits de mer, Vin blanc, Tomate cuisinée <span>23,00 €</span></li>
-        <li><strong>Gnoccocchi Aux Truffes</strong> Champignons, Salsa Tartufata, Gorgonzola <span>15,90 €</span></li>
+        <li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Spaghetti Paesana</div><div class="menu-item-desc">Thon, Échalote, Tomate, Ail, Huile d’olive, Câpres</div><div class="menu-item-price">17,50 €</div></div></li>
+        <li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Spaghetti Vongole</div><div class="menu-item-desc">Palourdes, Tomate fraîche, Ail, Persil</div><div class="menu-item-price">20,50 €</div></div></li>
+        <li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Spaghetti Frutti Di Mare</div><div class="menu-item-desc">Fruits de mer, Basilic, Tomate cuisinée</div><div class="menu-item-price">22,50 €</div></div></li>
+        <li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Spaghetti San Daniele</div><div class="menu-item-desc">Jambon de Parme, Roquette, Tomate séchée, Parmesan</div><div class="menu-item-price">18,90 €</div></div></li>
+        <li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Pappardelle Aux Truffes</div><div class="menu-item-desc">Crème de truffe, Tomates cerises</div><div class="menu-item-price">19,50 €</div></div></li>
+        <li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Risotto Frutti Di Mare</div><div class="menu-item-desc">Fruits de mer, Vin blanc, Tomate cuisinée</div><div class="menu-item-price">23,00 €</div></div></li>
+        <li><div class="menu-line"><div class="menu-item-name"><span class="menu-icon">🍝</span>Gnoccocchi Aux Truffes</div><div class="menu-item-desc">Champignons, Salsa Tartufata, Gorgonzola</div><div class="menu-item-price">15,90 €</div></div></li>
       </ul>
     </section>
   </main>
